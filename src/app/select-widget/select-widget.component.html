@@ -1,0 +1,98 @@
+<div class="container mt-4">
+
+  <div class="row">
+
+    <div class="rounded border border-success col-md-3 d-flex align-items-center" style="height:700px">
+
+
+      <div *ngIf="widgetsState[0]==='weatherWidget';else clockWidget1" class="w-100"
+        style='background-size: cover;background-position: center;height:100%;background-image:url("../assets/hava-durumu-2.png");'>
+        {{weatherWidget.title}}
+      </div>
+      <ng-template #clockWidget1>
+
+        <div *ngIf='widgetsState[0]==="clockWidget";else default1' (click)='setWidgetState("clockWidget")'
+          style='background-size: cover;background-position: center;height:100%;background-image:url("../assets/saat.jpg");'
+          class="w-100">
+          {{clockWidget.title}}
+        </div>
+      </ng-template>
+
+      <ng-template #default1>
+
+        <a type="button" routerLink="/widget/1" class="btn btn-outline-primary mx-auto">Widget ekle</a>
+      </ng-template>
+    </div>
+
+
+
+
+    <div class="rounded border border-success col-md-3 d-flex align-items-center" style="height:700px">
+
+
+      <div *ngIf="widgetsState[1]==='weatherWidget';else clockWidget2" class="w-100"
+        style='background-size: cover;background-position: center;height:100%;background-image:url("../assets/hava-durumu-2.png");'>
+        {{weatherWidget.title}}
+      </div>
+      <ng-template #clockWidget2>
+
+        <div *ngIf="widgetsState[1]==='clockWidget';else default2" (click)='setWidgetState("clockWidget")' class="w-100"
+          style='background-size: cover;background-position: center;height:100%;background-image:url("../assets/saat.jpg");'>
+          {{clockWidget.title}}
+        </div>
+      </ng-template>
+
+      <ng-template #default2>
+
+        <a type="button" routerLink="/widget/2" class="btn btn-outline-primary mx-auto">Widget ekle</a>
+      </ng-template>
+    </div>
+
+
+
+    <div class="rounded border border-success col-md-3 d-flex align-items-center" style="height:700px">
+
+
+      <div *ngIf="widgetsState[2]==='weatherWidget';else clockWidget3" class="w-100"
+        style='background-size: cover;background-position: center;height:100%;background-image:url("../assets/hava-durumu-2.png");'>
+        {{weatherWidget.title}}
+      </div>
+      <ng-template #clockWidget3>
+
+        <div *ngIf='widgetsState[2]==="clockWidget";else default3' (click)='setWidgetState("clockWidget")' class="w-100"
+          style='background-size: cover;background-position: center;height:100%;background-image:url("../assets/saat.jpg");'>
+          {{clockWidget.title}}
+        </div>
+      </ng-template>
+
+      <ng-template #default3>
+
+        <a type="button" routerLink="/widget/3" class="btn btn-outline-primary mx-auto">Widget ekle</a>
+      </ng-template>
+    </div>
+
+
+
+    <div class="rounded border border-success col-md-3 d-flex align-items-center" style="height:700px">
+
+
+      <div *ngIf="widgetsState[3]==='weatherWidget';else clockWidget4" class="w-100"
+        style='background-size: cover;background-position: center;height:100%;background-image:url("../assets/hava-durumu-2.png");'>
+        {{weatherWidget.title}}
+      </div>
+      <ng-template #clockWidget4>
+
+        <div *ngIf='widgetsState[3]==="clockWidget";else default4' (click)='setWidgetState("clockWidget")' class="w-100"
+          style='background-size: cover;background-position: center;height:100%;background-image:url("../assets/saat.jpg");'>
+          {{clockWidget.title}}
+        </div>
+      </ng-template>
+
+      <ng-template #default4>
+
+        <a type="button" routerLink="/widget/4" class="btn btn-outline-primary mx-auto">Widget ekle</a>
+      </ng-template>
+    </div>
+
+  </div>
+</div>

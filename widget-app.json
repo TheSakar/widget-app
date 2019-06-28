@@ -1,0 +1,21 @@
+{
+    "widgets": [
+        {
+            "id": 1,
+            "title": "Hava durumu",
+            "city":"Ankara",
+            "degree":"30C",
+            "content":"Çoğunlukla güneşli",
+            "felt":"Hissedilen 28C",
+            "lastUpdate":"13:25"
+        },
+        {
+            "id": 2,
+            "title": "Saat",
+            "city":"Ankara",
+            "day":"Cumartesi",
+            "month":"Haziran 29",
+            "time":"21:55"
+        }
+    ]
+}

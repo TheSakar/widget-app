@@ -1,0 +1,20 @@
+<div class="container mt-4">
+
+  <div class="row">
+
+    <button (click)='setWidgetState("weatherWidget")'
+      style='height:700px;background-size: cover;background-position: center;background-image:url("../assets/hava-durumu-2.png");'
+      class="rounded border border-success col-md-6">
+      {{weatherWidget.title}}
+    </button>
+
+
+    <button (click)='setWidgetState("clockWidget")'
+      style='height:700px;background-size: cover;background-position: center;background-image:url("../assets/saat.jpg");'
+      class="rounded border border-success col-md-6 d-flex align-items-center">
+      {{clockWidget.title}}
+    </button>
+  </div>
+
+
+</div>
