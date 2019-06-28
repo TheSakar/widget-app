@@ -7,6 +7,7 @@ import { WidgetComponent } from './widget/widget.component';
 import { SelectWidgetComponent } from './select-widget/select-widget.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,

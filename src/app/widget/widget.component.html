@@ -5,14 +5,18 @@
     <button (click)='setWidgetState("weatherWidget")'
       style='height:700px;background-size: cover;background-position: center;background-image:url("../assets/hava-durumu-2.png");'
       class="rounded border border-success col-md-6">
-      {{weatherWidget.title}}
+      <b>{{weatherWidget.title}}</b><br>{{weatherWidget.city}}<br>{{weatherWidget.degree}}<br>{{weatherWidget.content}}<br>{{weatherWidget.felt}},Son
+      güncelleme:{{weatherWidget.lastUpdate}}
     </button>
 
 
     <button (click)='setWidgetState("clockWidget")'
       style='height:700px;background-size: cover;background-position: center;background-image:url("../assets/saat.jpg");'
-      class="rounded border border-success col-md-6 d-flex align-items-center">
-      {{clockWidget.title}}
+      class="rounded border border-success col-md-6 ">
+      <div class="mt-4" style="width: 100%;height:70%;vertical-align:text-top">
+
+        <b>{{clockWidget.title}}</b><br>{{clockWidget.city}}<br>{{clockWidget.day}}<br>{{clockWidget.month}}<br>{{clockWidget.time}}
+      </div>
     </button>
   </div>
 

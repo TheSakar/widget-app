@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Widget } from 'src/models/widget';
 import { WidgetService } from 'src/services/widget.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertifyService } from 'src/services/alertify.service';
 
 @Component({
   selector: 'app-widget',
@@ -11,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class WidgetComponent implements OnInit {
 
-  constructor(private widgetService: WidgetService, private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private alertifyService: AlertifyService, private widgetService: WidgetService, private activatedRoute: ActivatedRoute, private router: Router) {
 
   }
 
@@ -34,6 +35,7 @@ export class WidgetComponent implements OnInit {
   setWidgetState(widgetName: string) {
     localStorage.setItem("widget" + this.id, widgetName);
     this.router.navigate(['/widgets'])
+    this.alertifyService.success("Widget eklendi!")
   }
 
   getWeatherWidget() {
